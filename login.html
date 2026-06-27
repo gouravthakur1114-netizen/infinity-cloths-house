@@ -30,11 +30,45 @@ input{
     margin:10px 0;
     border:none;
     border-radius:5px;
+    box-sizing:border-box;
 }
 
 button{
     width:100%;
     padding:12px;
     background:#f5c542;
-
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
 }
+
+button:hover{
+    background:#e6b800;
+}
+
+a{
+    color:#f5c542;
+    text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <input type="email" placeholder="Enter Email">
+
+    <input type="password" placeholder="Enter Password">
+
+    <button onclick="window.location.href='index.html'">Login</button>
+
+    <p>Don't have an account?
+        <a href="signup.html">Sign Up</a>
+    </p>
+</div>
+
+</body>
+</html>
