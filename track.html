@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Track Order</title>
+<link rel="stylesheet" href="infinty.css">
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:50px;
+}
+.track{
+background:#222;
+padding:30px;
+border-radius:15px;
+width:400px;
+margin:auto;
+}
+input{
+width:90%;
+padding:12px;
+margin:15px 0;
+border-radius:8px;
+border:none;
+}
+button{
+padding:12px 25px;
+background:#f5c542;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="track">
+<h2>Track Your Order</h2>
+
+<input type="text" placeholder="Enter Order ID">
+
+<button onclick="trackOrder()">Track</button>
+
+<p id="status"></p>
+
+</div>
+
+<script>
+function trackOrder(){
+document.getElementById("status").innerHTML =
+"✅ Your order is Out for Delivery.";
+}
+</script>
+
+</body>
+</html>

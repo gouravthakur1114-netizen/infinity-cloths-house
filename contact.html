@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Infinity Cloths House</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:50px auto;
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.contact-form,
+.contact-info{
+flex:1;
+background:#222;
+padding:30px;
+border-radius:15px;
+}
+
+h2{
+margin-bottom:20px;
+color:#f5c542;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#f5c542;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:white;
+}
+
+.contact-info p{
+margin:15px 0;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="contact-form">
+
+<h2>Contact Us</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Mobile Number">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div>
+
+<div class="contact-info">
+
+<h2>Our Store</h2>
+
+<p>📍 Infinity Cloths House, Narwana, Haryana</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>📧 infinityclothshouse@gmail.com</p>
+
+<p>🕒 Mon - Sat : 10:00 AM - 8:00 PM</p>
+
+</div>
+
+</div>
+
+<script>
+function sendMessage(){
+alert("Thank You! Your message has been sent successfully.");
+}
+</script>
+
+</body>
+</html>

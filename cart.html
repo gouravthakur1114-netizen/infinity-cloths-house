@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+}
+
+header{
+    background:#000;
+    padding:20px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+}
+
+#cartItems{
+    max-width:800px;
+    margin:40px auto;
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    border-bottom:1px solid #555;
+    padding-bottom:10px;
+}
+
+.total{
+    font-size:24px;
+    text-align:right;
+    margin-top:20px;
+}
+
+button{
+    background:#f5c542;
+    color:black;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>🛒 Infinity Cloths House Cart</header>
+
+<div id="cartItems"></div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let html = "";
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+html += `
+<div class="item">
+
+<div>
+<h3>${item.name}</h3>
+<p>₹${item.price}</p>
+</div>
+
+<div>
+
+<button onclick="decrease(${index})">-</button>
+
+<span style="margin:0 10px;">1</span>
+
+<button onclick="increase(${index})">+</button>
+
+<br><br>
+
+<button onclick="removeItem(${index})">❌ Remove</button>
+
+</div>
+
+</div>
+`;
+
+total += item.price;
+
+});
+
+html += `<div class="total">Total : ₹${total}</div>`;
+
+html += `<center><button onclick="checkout()">Proceed To Checkout</button></center>`;
+
+document.getElementById("cartItems").innerHTML = html;
+
+function checkout(){
+
+alert("Thank You For Shopping With Infinity Cloths House ❤️");
+
+localStorage.clear();
+
+location.reload();
+
+}
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+location.reload();
+
+}
+
+function increase(index){
+
+alert("Quantity Increased");
+
+}
+
+function decrease(index){
+
+alert("Quantity Decreased");
+
+}
+
+</script>
+
+
+</body>
+</html>

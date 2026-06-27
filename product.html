@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+
+<link rel="stylesheet" href="infinty.css">
+
+<style>
+.product{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+padding:80px;
+color:white;
+}
+
+.product img{
+width:400px;
+border-radius:15px;
+}
+
+.details h1{
+font-size:40px;
+}
+
+.details p{
+font-size:22px;
+margin:20px 0;
+}
+
+.details button{
+padding:15px 35px;
+background:#f5c542;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1 style="text-align:center;color:white;">Infinity Cloths House</h1>
+</header>
+
+<div class="product">
+
+<img src="images/tshirt.jpg">
+
+<div class="details">
+
+<h1>Black Oversized T-Shirt</h1>
+
+<p>Price : ₹799</p>
+
+<p>⭐⭐⭐⭐⭐ (4.9 Rating)</p>
+<p>
+Premium quality cotton oversized T-Shirt.
+Soft fabric, comfortable fit and perfect for daily wear.
+</p>
+
+<label>Size :</label>
+
+<select>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<br><br>
+
+<button onclick="addToCart('Black Oversized T-Shirt',799)">
+Add To Cart
+</button>
+
+<button onclick="location.href='checkout.html'">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<script src="infinity.js"></script>
+
+</body>
+</html>

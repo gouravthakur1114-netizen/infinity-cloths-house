@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinity Cloths House</title>
+<link rel="stylesheet" href="infinty.css">
+</head>
+<body>
+    <div id="loader">
+    <h1>Infinity Cloths House</h1>
+    <p>Loading...</p>
+</div>
+
+<header>
+    <div class="logo">
+    <img src="logo.jpg.jpeg" alt="Infinity Cloths House Logo">
+</div>
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search Products..." onkeyup="searchProduct()">
+</div>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="#">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="track.html">Track Order</a>
+
+        <button id="themeBtn" onclick="changeTheme()">🌙</button>
+    </nav>
+</header>
+<section class="hero">
+    <h1>Premium Men's Fashion</h1>
+    <p>Upgrade Your Style With Infinity Cloths House</p>
+    <button>Shop Now</button>
+</section>
+<section class="categories">
+<h2>Shop By Category</h2>
+
+<div class="category" onclick="filterProducts('all')">All</div>
+
+<div class="category" onclick="filterProducts('tshirt')">👕 T-Shirts</div>
+
+<div class="category" onclick="filterProducts('jeans')">👖 Jeans</div>
+
+<div class="category" onclick="filterProducts('hoodie')">🧥 Hoodies</div>
+
+</section>
+<section class="products">
+
+<h2>Trending Collection</h2>
+
+<div class="card product tshirt">
+<a href="product.html">
+<span class="heart" onclick="wishlist()">❤️</span>
+<span class="sale">50% OFF</span>
+<img src="tshirt.jpg" alt="T-Shirt">
+</a>
+
+<h3>Black Oversized T-Shirt</h3>
+<p>₹799</p>
+<p>⭐⭐⭐⭐⭐ (4.9)</p>
+
+<button onclick="addToCart('Black Oversized T-Shirt',799)">
+Add To Cart
+</button>
+
+<button class="buy" onclick="location.href='checkout.html'">
+Buy Now
+</button>
+</div>
+
+<div class="card product jeans">
+<span class="heart" onclick="wishlist()">❤️</span>
+<span class="sale">50% OFF</span>
+<img src="jeans.jpg.jpeg" alt="Jeans">
+
+<h3>Slim Fit Jeans</h3>
+<p>₹1499</p>
+<p>⭐⭐⭐⭐⭐ (4.9)</p>
+
+<button onclick="addToCart('Slim Fit Jeans',1499)">
+Add To Cart
+</button>
+
+<button class="buy" onclick="location.href='checkout.html'">
+Buy Now
+</button>
+</div>
+
+<div class="card product hoodie">
+<span class="heart" onclick="wishlist()">❤️</span>
+<span class="sale">50% OFF</span>
+<img src="hoodie.jpg.jpeg" alt="Hoodie">
+
+<h3>Premium Hoodie</h3>
+<p>₹1899</p>
+<p>⭐⭐⭐⭐⭐ (4.9)</p>
+
+<button onclick="addToCart('Premium Hoodie',1899)">
+Add To Cart
+</button>
+
+<button class="buy" onclick="location.href='checkout.html'">
+Buy Now
+</button>
+</div>
+
+</section>
+
+<section class="new-arrivals">
+
+<h2>New Arrivals</h2>
+
+<div class="products">
+
+<div class="card product">
+<img src="shirt1.jpg.jpeg" alt="Premium Shirt">
+<h3>Premium Shirt</h3>
+<p>₹999</p>
+<button>Add To Cart</button>
+</div>
+
+<div class="card product">
+<img src="jeans2.jpg.jpeg" alt="Blue Denim Jeans">
+<h3>Blue Denim Jeans</h3>
+<p>₹1599</p>
+<button>Add To Cart</button>
+</div>
+
+<div class="card product">
+<img src="hoodie2.jpg.jpeg" alt="Winter Hoodie">
+<h3>Winter Hoodie</h3>
+<p>₹1999</p>
+<button>Add To Cart</button>
+</div>
+
+</div>
+
+</section>
+<section class="featured">
+
+<h2>Featured Products</h2>
+
+<div class="products">
+
+<div class="card product">
+<img src="watch.jpg.jpeg" alt="Luxury Watch">
+<h3>Luxury Watch</h3>
+<p>₹2999</p>
+<p>⭐⭐⭐⭐⭐ (5.0)</p>
+<button>Add To Cart</button>
+<button class="buy">Buy Now</button>
+</div>
+
+<div class="card product">
+<img src="cap.jpg.jpeg" alt="Cap">
+<h3>Stylish Cap</h3>
+<p>₹499</p>
+<p>⭐⭐⭐⭐⭐ (4.8)</p>
+<button>Add To Cart</button>
+<button class="buy">Buy Now</button>
+</div>
+
+</div>
+
+</section>
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-box">
+
+<div class="review">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Best quality clothes. Delivery was very fast!"</p>
+<h4>- Rahul</h4>
+</div>
+
+<div class="review">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Amazing hoodie. Fabric quality is excellent."</p>
+<h4>- Aman</h4>
+</div>
+
+<div class="review">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Affordable prices and premium collection."</p>
+<h4>- Mohit</h4>
+</div>
+
+</div>
+
+</section>
+<section class="coupon">
+
+<h2>🎁 Special Offer</h2>
+
+<p>Use Coupon Code</p>
+
+<h1>SAVE20</h1>
+
+<p>Get 20% OFF On Your First Order</p>
+
+<button onclick="copyCoupon()">Copy Coupon</button>
+
+</section>
+<section class="newsletter">
+
+<h2>Subscribe To Our Newsletter</h2>
+
+<p>Get latest offers & new arrivals directly in your inbox.</p>
+
+<input type="email" placeholder="Enter Your Email">
+
+<button onclick="subscribe()">Subscribe</button>
+
+</section>
+
+<footer>
+
+<h2>Infinity Cloths House</h2>
+
+<p>Email : infinityclothshouse@gmail.com</p>
+
+<p>Phone : +91 7056709634</p>
+
+<p>© 2026 All Rights Reserved</p>
+<div class="social">
+    <a href="#">📷 Instagram</a>
+    <a href="#">📘 Facebook</a>
+    <a href="#">💬 WhatsApp</a>
+</div>
+
+<div class="footer-links">
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms & Conditions</a> |
+    <a href="#">About Us</a>
+</div>
+
+</footer>
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script src="infinity.js"></script>
+
+</body>
+</html>
